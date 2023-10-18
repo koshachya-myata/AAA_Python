@@ -1,8 +1,13 @@
 """CountVectorizer class."""
+from typing import Union
 
 
 class CountVectorizer():
     """Convert a collection of text documents to a matrix of token counts."""
+
+    def __init__(self) -> None:
+        """Initialize vocabulary as None."""
+        self.vocabulary: Union[dict[str, int], None] = None
 
     @staticmethod
     def _get_vocabulary_from_words(corpuses_words: list[str]) -> dict[str,
@@ -55,4 +60,6 @@ class CountVectorizer():
         Returns:
             list[str]: list of feature names.
         """
+        if self.vocabulary is None:
+            return []
         return list(self.vocabulary)
