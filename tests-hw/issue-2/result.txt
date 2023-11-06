@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.16, pytest-7.4.3, pluggy-1.3.0
+rootdir: /Users/akest/Desktop/AAA/AAA_Python/tests-hw/issue-2
+plugins: cov-4.1.0, anyio-3.6.2
+collected 4 items
+
+test_decode.py ....                                                      [100%]
+
+============================== 4 passed in 0.02s ===============================
