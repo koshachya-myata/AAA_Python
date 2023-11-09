@@ -1,16 +1,13 @@
-"""Example for CountVectorizer."""
-from CountVectorizer import CountVectorizer
+"""Example for TfidfVectorizer."""
+from TfidfVectorizer import TfidfVectorizer
 
 
 if __name__ == '__main__':
-    corpuses = [
-        'Crock Pot Pasta Never boil pasta again',
-        'Pasta Pomodoro Fresh ingredients Parmesan to taste'
+    corpus = [
+            'Crock Pot Pasta Never boil pasta again',
+            'Pasta Pomodoro Fresh ingredients Parmesan to taste'
     ]
-    vectorizer = CountVectorizer()
-    count_matrix = vectorizer.fit_transform(corpuses)
-    print('Feature names:', ', '.join(vectorizer.get_feature_names()) + '.')
-    print('-' * 12)
-    print('Count matrix:')
-    for vec in count_matrix:
-        print('\t' + ' '.join([str(n) for n in vec]))
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(corpus)
+    for vec in tfidf_matrix:
+        print(' '.join([str(round(n, 3)) for n in vec]))
